@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mood Tracker</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>how are you feeling?</h1>
+                <div class="controls">
+                    <button id="prev-month">&larr;</button>
+                    <span id="current-month"></span>
+                    <button id="next-month">&rarr;</button>
+                </div>
+            </header>
+
+            <div class="legend">
+                <div class="mood-option" data-mood="5">amazing</div>
+                <div class="mood-option" data-mood="4">good</div>
+                <div class="mood-option" data-mood="3">ok</div>
+                <div class="mood-option" data-mood="2">bad</div>
+                <div class="mood-option" data-mood="1">awful</div>
+
+            </div>
+
+            <div id="calendar"></div>
+
+            <div class="notes-section">
+                <h3>add a note (optional)</h3>
+                <textarea id="note input" placeholder="what happened today?"></textarea>
+                <button id="save-note">save note</button>
+                <div id="note-display"></div>
+            </div>
+
+            <div class="stats">
+                <p>logged: <span id="logged-count">0</span> days</p>
+                <p>streak: <span id="streak">0</span> days</p>
+                <p>most common mood: <span id="common-mood">-</span></p>
+                <p>avg this month: <span id="avg-mood">-</span></p>
+            </div>
+
+            <div class="insights">
+                <h3>patterns</h3>
+                <div id="insights-content">
+                    <p>log more days to see patterns</p>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="export-data">export data</button>
+                <button id="clear-all">clear all data</button>
+                <button id="view-year">year view</button>
+            </div>
+
+            <div id="year-view" class="year-view hidden">
+                <button id="close-year">&times;</button>
+                <h2 id="year-title"></h2>
+                <div id="year-grid"></div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
