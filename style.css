@@ -137,3 +137,64 @@ h1 {
     margin-bottom: 30px;
 }
 
+.dry-label {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 8px 0;
+    color: #666;
+}
+
+.day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.day:hover {
+    border-color: #111;
+}
+
+
+.day.empty {
+    background: transparent;
+    border: none;
+    cursor: default;
+}
+
+.day.future {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.day.today {
+    border: 2px solid #111;
+    font-weight: 700;
+}
+
+.day[data-logged="5"] { background: #a8e6cf;}
+.day[data-logged="4"] { background: #dcedc1;}
+.day[data-logged="3"] {background: #ffd3b6;}
+.day[data-logged="2"] {background: #ffaaa5;}
+.day[data-logged="1"] {background: #ff8b94;}
+
+.stats {
+    padding: 20px;
+    background: white;
+    border: 1px solid #e0e0e0;
+}
+
+.stats p {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+.stats span {
+    font-weight: 700;
+}
